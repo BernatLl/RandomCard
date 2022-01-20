@@ -1,1 +1,25 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+.card {
+  display: inline-block;
+  height: 400px;
+  width: 250px;
+  border-radius: 0.5em;
+  padding: 10px;
+  position: relative;
+}
+.top-pick {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  font-size: 80px;
+}
+.bottom-pick {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  font-size: 80px;
+}
+.number;
