@@ -5,14 +5,12 @@ body {
 .card {
   display: inline-block;
   height: 400px;
-  width: 250px;
+  width: 280px;
   border-radius: 0.5em;
-  padding: 10px;
   position: relative;
 }
 .top-pick {
   position: absolute;
-  top: 0px;
   left: 20px;
   font-size: 80px;
 }
@@ -21,5 +19,30 @@ body {
   bottom: 0px;
   right: 20px;
   font-size: 80px;
+  transform: rotateX(180deg);
 }
-.number;
+.cardNumber {
+  position: absolute;
+  top: 28%;
+  left: 40%;
+  font-size: 110px;
+  margin-left: 0;
+  color: black;
+}
+
+.spade {
+  content: "\2660";
+}
+
+.club {
+  content: "\2663";
+}
+
+.heart {
+  color: red;
+  content: "\2665";
+}
+.diamond {
+  color: red;
+  content: "\2666";
+}
