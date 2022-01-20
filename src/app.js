@@ -4,7 +4,7 @@ import "./main.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-let pick;
+
 window.onload = () => {
   document.querySelector(".spade").classList.add(GenRandomPicks());
   document.querySelector(".cardNumber").innerHTML = GenRandomNumber();
