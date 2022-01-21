@@ -2,7 +2,7 @@
 import "bootstrap";
 import "./main.css";
 
-let GenRandomNumber = () => {
+const GenRandomNumber = () => {
   let cardNumber = [
     "A",
     "2",
@@ -22,13 +22,13 @@ let GenRandomNumber = () => {
   let indexNumbers = Math.floor(Math.random() * cardNumber.length);
   return cardNumber[indexNumbers];
 };
-let GenRandomPicks = () => {
+const GenRandomPicks = () => {
   let picks = ["♦️", "♥️", "♠️", "♣️"];
 
   let indexPicks = Math.floor(Math.random() * picks.length);
   return picks[indexPicks];
 };
-let randomPicks = GenRandomPicks();
+const randomPicks = GenRandomPicks();
 const cardPick = document.querySelectorAll(".cardpick");
 window.onload = () => {
   document.querySelector(".cardNumber").innerHTML = GenRandomNumber();
