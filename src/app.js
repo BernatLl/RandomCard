@@ -1,7 +1,7 @@
 /* eslint-disable */
 import "bootstrap";
 import "./main.css";
-const cardPick = document.querySelectorAll(".cardpick");
+
 let GenRandomNumber = () => {
   let cardNumber = [
     "A",
@@ -28,12 +28,13 @@ let GenRandomPicks = () => {
   let indexPicks = Math.floor(Math.random() * picks.length);
   return picks[indexPicks];
 };
+let randomPicks = GenRandomPicks();
+const cardPick = document.querySelectorAll(".cardpick");
 window.onload = () => {
   document.querySelector(".cardNumber").innerHTML = GenRandomNumber();
 
-  cardPick.forEach((item, i) => {
-    item[i] === item;
-    item.innerHTML = GenRandomPicks();
+  cardPick.forEach(item => {
+    item.innerHTML = randomPicks;
     if (item.innerHTML === "♦️" || item.innerHTML === "♥️")
       item.style.color = "red";
   });
