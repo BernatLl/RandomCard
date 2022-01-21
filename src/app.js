@@ -1,14 +1,7 @@
 /* eslint-disable */
 import "bootstrap";
 import "./main.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = () => {
-  document.querySelector(".spade").classList.add(GenRandomPicks());
-  document.querySelector(".cardNumber").innerHTML = GenRandomNumber();
-};
+const cardPick = document.querySelectorAll(".cardpick");
 let GenRandomNumber = () => {
   let cardNumber = [
     "A",
@@ -30,8 +23,18 @@ let GenRandomNumber = () => {
   return cardNumber[indexNumbers];
 };
 let GenRandomPicks = () => {
-  let picks = ["diamond", "heart", "spade", "club"];
+  let picks = ["♦️", "♥️", "♠️", "♣️"];
 
   let indexPicks = Math.floor(Math.random() * picks.length);
   return picks[indexPicks];
+};
+window.onload = () => {
+  document.querySelector(".cardNumber").innerHTML = GenRandomNumber();
+
+  cardPick.forEach((item, i) => {
+    item[i] === item;
+    item.innerHTML = GenRandomPicks();
+    if (item.innerHTML === "♦️" || item.innerHTML === "♥️")
+      item.style.color = "red";
+  });
 };
